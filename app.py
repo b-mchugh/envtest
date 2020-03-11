@@ -11,7 +11,7 @@ class RH(BaseHTTPRequestHandler):
         self.send_response(200)
         self.send_header('Content-type','text/html')
         self.end_headers()
-        message = ['os.environ']
+        message = os.environ
         for i in message:
             self.wfile.write(bytes(i, "utf8"))
         return
